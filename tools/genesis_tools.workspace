@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_workspace_file>
+	<Workspace title="Workspace">
+		<Project filename="bintos/bintos.cbp" />
+		<Project filename="pcmtoraw/pcmtoraw.cbp" />
+		<Project filename="wavtoraw/wavtoraw.cbp" />
+		<Project filename="rescomp/rescomp.cbp" />
+		<Project filename="appack/appack.cbp" />
+		<Project filename="xgmtool/xgmtool.cbp" />
+		<Project filename="sizebnd/sizebnd.cbp" />
+		<Project filename="uftc/uftc.cbp" />
+	</Workspace>
+</CodeBlocks_workspace_file>
