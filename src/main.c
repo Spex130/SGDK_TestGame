@@ -23,6 +23,22 @@ void myJoyHandler( u16 joy, u16 changed, u16 state)
 
 int main()
 {
+	u16 palette[64];
+    u16 ind;
+
+	// disable interrupt when accessing VDP
+    SYS_disableInts();
+    // initialization
+    VDP_setScreenWidth320();
+
+	// init sprites engine
+    SPR_init(16, 256, 256);
+
+    // set all palette to black
+    VDP_setPaletteColors(0, (u16*) palette_black, 64);
+
+	// VDP process done, we can re enable interrupts
+    SYS_enableInts();
 
 	JOY_init();
 	JOY_setEventHandler( &myJoyHandler );
@@ -31,6 +47,9 @@ int main()
 	VDP_drawText("Hello World! - Genesis 2018", 10, 13);
 
 	u16 value;
+
+    sprites[0] = SPR_addSprite(&dungeon_tiles, 10, 10, TILE_ATTR(PAL2, TRUE, FALSE, FALSE));
+
 
 	while(1)
 	{
